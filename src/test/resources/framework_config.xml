@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!--
+  framework_config.xml Configuration used for Junit testing only.
+  
+  
+-->
+<configuration>
+  <property>
+    <name>jdbc.drivers</name>
+    <value>org.apache.hive.jdbc.HiveDriver</value>
+    <description>
+      Java classname of JDBC driver.
+    </description>
+  </property>
+  <property>
+    <name>jdbc.url</name>
+<!--    <value>jdbc:hive2://node1:10000/default;transportMode=http;httpPath=cliservice</value> -->
+    <value>jdbc:hive2:///</value>
+
+    <description>
+      URL Connect string
+    </description>
+  </property>
+  
+  <property>
+    <name>JobConfig.root</name>
+    <value>testconfig</value>
+    <description>
+      Name of root directory where framework controller will look for HQL files
+      to execute.
+    </description>
+  </property>
+
+  <property>
+    <name>monitor.interval</name>
+    <value>3</value>
+    <description>
+      Polling interval (in seconds) for task monitoring. Framework will sleep for this
+      lenght of time before waking up and checking on status of running jobs. 
+    </description>
+  </property>
+
+<!-- 
+	Kerboros principal set blank to bypass kinit authorizaton for testing. 
+-->
+  <property>
+    <name>kerboros.principal</name>
+    <value></value>
+    <description>
+      Name of Kerboros principal to authenticate against. If blank (or null) a 
+      non-kerboros system is assumed.
+    </description>
+  </property>
+
+  <property>
+    <name>mail.hostname</name>
+    <value>localhost</value>
+    <description>
+      Hostname used to send emails from framework. 
+    </description>
+  </property>
+
+  <property>
+    <name>mailfrom</name>
+    <value>HQL_WRAPPER</value>
+    <description>
+      Name to use in From field of any sent emails. 
+    </description>
+  </property>
+
+  <property>
+    <name>mailto</name>
+    <value>martinprobson@gmail.com</value>
+    <description>
+      Comma separated list of email addresses to email. 
+    </description>
+  </property>
+
+  <property>
+    <name>mailSuccess</name>
+    <value>true</value>
+    <description>
+      Send email on successful completion of framework? 
+    </description>
+  </property>
+
+<property>
+    <name>mailFailure</name>
+    <value>true</value>
+    <description>
+      Send email on failure of framework? 
+    </description>
+ </property>
+</configuration>
+ 
