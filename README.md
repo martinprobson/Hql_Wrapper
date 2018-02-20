@@ -41,7 +41,7 @@
   
   A failure in file 10_Init1 will prevent all other tasks from executing.
 
-  **See [TestHqlWrapper](test/java/net/martinprobson/hiveutils/TestHqlWrapper.java)** for an example job chain.
+  **See `TestHqlWrapper.java` for an example job chain.**
 
 ## Details
 The wrapper is configured via two XML config files that should be somewhere on the classpath. Each config item has an associated description and follows the same schmea as standard Hadoop configuration (e.g. hdfs-site.xml, hive-site.xml etc):
